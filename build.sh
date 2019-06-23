@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+echo Starting Building...
 # Setup
 mkdir bin
-rm bin/*
+rm -r bin/*
 
 # Firefox build
 ## Getting source files
@@ -10,10 +11,13 @@ mkdir firefox/icons/
 cp icons/* firefox/icons/
 cp src/fill.js firefox/fill.js
 ## Zipping
-zip -r bin/firefox.zip firefox/*
+cd firefox
+zip -r ../bin/firefox.zip *
+cd ..
 ## Cleaning
 rm -r firefox/icons/
 git clean -f
+echo Build firefox to bin/firefox.zip
 
 # Chrome build
 ## Getting source files
@@ -23,3 +27,6 @@ mkdir bin/chrome/
 cp chrome/* bin/chrome/
 ## Cleaning
 git clean -f
+echo Build Chrome to bin/chrome
+
+echo Build finished.
