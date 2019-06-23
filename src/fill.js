@@ -1,17 +1,11 @@
-{
-    let gaf_reload = false;
-    function fillFieldWithRepoName(field) {
-        if (!field.value) {
-            field.value = location.href.split('/')[4];
-            gaf_reload = true;
-        }
+function fillFieldWithRepoName(field, form) {
+    if (!field.value) {
+        field.value = location.href.split('/')[4];
     }
-
-    document.getElementsByName('verify').forEach((element) => {
-        fillFieldWithRepoName(element);
-    });
-    fillFieldWithRepoName(document.getElementById('confirm_repository_name'));
-    if (gaf_reload) {
-        location.reload();
-    }
+    form.querySelectorAll('button')[0].disabled = false;
 }
+
+document.getElementsByName('verify').forEach((element) => {
+    fillFieldWithRepoName(element, element.parentElement.parentElement);
+});
+fillFieldWithRepoName(document.getElementById('confirm_repository_name'), document.getElementById('confirm_repository_name').parentElement.parentElement.parentElement.parentElement);
