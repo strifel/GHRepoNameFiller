@@ -7,3 +7,4 @@ This is a simple Firefox Plugin which automatically fills these fields with the 
 - Make Public/Make private
 - Archive/Unarchive
 - Delete
+- Transfer repository

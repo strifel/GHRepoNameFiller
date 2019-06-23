@@ -1,10 +1,17 @@
-let gaf_reload = false;
-document.getElementsByName('verify').forEach((element) => {
-    if (!element.value) {
-        element.value = location.href.split('/')[4];
-        gaf_reload = true;
+{
+    let gaf_reload = false;
+    function fillFieldWithRepoName(field) {
+        if (!field.value) {
+            field.value = location.href.split('/')[4];
+            gaf_reload = true;
+        }
     }
-});
-if (gaf_reload) {
-    location.reload();
+
+    document.getElementsByName('verify').forEach((element) => {
+        fillFieldWithRepoName(element);
+    });
+    fillFieldWithRepoName(document.getElementById('confirm_repository_name'));
+    if (gaf_reload) {
+        location.reload();
+    }
 }
