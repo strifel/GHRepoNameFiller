@@ -8,3 +8,6 @@ This is a simple Firefox Plugin which automatically fills these fields with the 
 - Archive/Unarchive
 - Delete
 - Transfer repository
+
+## Get extension
+[For firefox](https://addons.mozilla.org/de/firefox/addon/ghreponamefiller/)
