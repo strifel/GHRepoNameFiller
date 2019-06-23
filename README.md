@@ -10,4 +10,5 @@ This is a simple Firefox Plugin which automatically fills these fields with the 
 - Transfer repository
 
 ## Get extension
-[For firefox](https://addons.mozilla.org/de/firefox/addon/ghreponamefiller/)
+[For firefox](https://addons.mozilla.org/de/firefox/addon/ghreponamefiller/)<br>
+[For Chrome (not in Chrome Webstore)](https://github.com/strifel/GHRepoNameFiller/releases/download/1.1/chrome.crx)
