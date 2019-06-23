@@ -1,0 +1,12 @@
+{
+  "name": "GHRepoNameFiller",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Fills github archive/delete challenges automatically",
+  "homepage_url": "https://github.com/strifel/GHRepoNameFiller",
+  "content_scripts": [{
+    "js": ["contentscript.js"],
+    "matches": ["https://github.com/*/*/settings"]
+  }],
+  "web_accessible_resources": ["fill.js"]
+}
