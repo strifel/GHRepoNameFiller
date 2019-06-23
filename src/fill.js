@@ -3,6 +3,7 @@ function fillFieldWithRepoName(field, form) {
         field.value = location.href.split('/')[4];
     }
     form.querySelectorAll('button')[0].disabled = false;
+    field.hidden = true;
 }
 
 document.getElementsByName('verify').forEach((element) => {
